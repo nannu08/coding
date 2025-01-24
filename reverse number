@@ -1,0 +1,13 @@
+class Solution {
+    reverseDigits(num) {
+       let rev = 0;
+       
+       num = Math.abs(num);
+       while(num>0){
+           const lastDigit= num%10;
+           rev= rev*10 +lastDigit;
+           num= Math.floor(num/10);
+       }
+       return rev;
+    }
+}
