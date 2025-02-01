@@ -1,0 +1,21 @@
+class Solution {
+    kLargest(arr, k) {
+        // code here
+        let large = -Infinity;
+        let result = [];
+        
+        for(let i=0;i<k ;i++){
+            let max= -Infinity;
+            let maxIndex = -1;
+            
+            for(let j=0;j<arr.length;j++){
+                if(arr[j]>max && !result.includes(arr[j])){
+                    max= arr[j];
+                    maxIndex = j;
+                }
+            }
+            result.push(max)
+        }
+        return result;
+    }   
+}
