@@ -1,0 +1,19 @@
+class Solution {
+    // Function returns the second largest element
+    getSecondLargest(arr) {
+        // Code Here
+      let  large = arr[0];
+      let  secondLarge = arr[1];
+        for(let i=0;i<arr.length ;i++){
+            if(arr[i]>large){
+        // find largest element and update it with second large
+               # 
+                secondLarge = large;
+                 large=arr[i];
+            }
+            else if (arr[i]>secondLarge && arr[i]!= large)
+            secondLarge = arr[i];
+        }
+        return secondLarge;
+    }
+}
